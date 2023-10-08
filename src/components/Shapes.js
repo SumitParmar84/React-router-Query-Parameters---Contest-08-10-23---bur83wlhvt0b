@@ -4,9 +4,9 @@ import { Link, useSearchParams } from 'react-router-dom'
 
   
  export default function Shapes() {
-   const [param, setParams] = useSearchParams();
+   const [params, setParams] = useSearchParams();
    const shape = params.get("shape");
-   const color = param.get("color");
+   const color = params.get("color");
    
    
     
