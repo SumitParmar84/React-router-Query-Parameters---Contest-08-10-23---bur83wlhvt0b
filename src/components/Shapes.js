@@ -1,15 +1,14 @@
 import React from 'react'
 import "../styles/Shapes.css";
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
   
  export default function Shapes() {
-   const [params, setParams] = useSearchParams();
-   const shape = params.get("shape");
-   const color = params.get("color");
    
-   
-    
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const shape = queryParams.get('shape');
+    const color = queryParams.get('color');
   
     // <Home />
     return (
@@ -30,8 +29,8 @@ import { Link, useSearchParams } from 'react-router-dom'
             <Link to="/shapes?shape=circle&color=Red">Red Circle</Link>
           </li>
         </ul>
-      <Child shape={shape} color={color}/>
-          
+  
+        <Child shape={shape} color={color} /> 
         
       </div>
     );
