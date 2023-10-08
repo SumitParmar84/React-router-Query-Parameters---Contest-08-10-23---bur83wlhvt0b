@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/App.css";
-import { BrowserRouter as Router,Link, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router,Link, Routes,Route, Switch, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Shapes from "./Shapes";
 import Image from "./Image";
@@ -10,29 +10,36 @@ import Image from "./Image";
 
 export default function App() {
   return (
-  <Router>
-    <div id="home">
+    
+    <Router>
+      <div id="home">
       <nav className="navbar navbar-light">
         <ul className="nav navbar-nav">
           <li>
-            <Link to="/"> Home </Link>
+            {/* Home*/}
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to= "/shapes">Shapes</Link>
+            {/* Shapes*/}
+            <Link to="/shapes">Shapes</Link>
           </li>
           <li>
-             <Link to="/image">Images</Link>
+           {/* Image*/}
+           <Link to="/image">Images</Link>
           </li>
         </ul>
       </nav>
-     </div>
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/shapes" element={<Shapes/>} />
-      <Route path="/image" element={<Image/>} />
-  </Routes> 
- 
-  </Router>
+      <Switch>
+          <Route path="/shapes" component={Shapes} />
+          <Route path="/image" component={Image} />
+          <Route path="/" component={Home} />
+          
+      </Switch>
+      
+    </div>
+       
+    </Router>
+      
   );
 }
 // export default App;
