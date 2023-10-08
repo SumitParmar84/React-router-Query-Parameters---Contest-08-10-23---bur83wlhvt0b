@@ -19,18 +19,19 @@ export default function App() {
           </li>
           <li>
             <Link to= "/shapes">Shapes</Link>
-              </li>
+          </li>
           <li>
              <Link to="/image">Images</Link>
           </li>
         </ul>
       </nav>
+     </div>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/shapes" element={<Shapes/>} />
       <Route path="/image" element={<Image/>} />
   </Routes> 
-  </div>
+ 
   </Router>
   );
 }
