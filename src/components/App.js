@@ -10,21 +10,29 @@ import Image from "./Image";
 
 export default function App() {
   return (
-    
+    <Router>
     <div id="home">
       <nav className="navbar navbar-light">
         <ul className="nav navbar-nav">
           <li>
-            {/* Home*/}
+            <Link to="/"> Home <Link>
           </li>
           <li>
-            {/* Shapes*/}
-          </li>
+            <Link to= "/shapes">Shapes</Link>
+              </li>
           <li>
-           {/* Image*/}
+             <Link to="/image">Images</Link>
           </li>
         </ul>
       </nav>
+    <Router>
+      <Route path="/" element={<Home/>} />
+      <Route path="/shapes" element={<Shapes/>} />
+      <Route path="/image" element={<Image/>} />
+    </div>
+  </Routes>
+  
+  
       
       
           
