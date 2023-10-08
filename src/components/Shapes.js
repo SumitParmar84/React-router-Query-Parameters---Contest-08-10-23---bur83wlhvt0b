@@ -1,9 +1,13 @@
 import React from 'react'
 import "../styles/Shapes.css";
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 
   
  export default function Shapes() {
+   const [param, setParams] = useSearchParams();
+   const shape = params.get("shape");
+   const color = param.get("color");
+   
    
     
   
@@ -26,7 +30,7 @@ import { Link, useLocation } from 'react-router-dom'
             <Link to="/shapes?shape=circle&color=Red">Red Circle</Link>
           </li>
         </ul>
-  
+      <Child shape={shape} color={color}/>
           
         
       </div>
