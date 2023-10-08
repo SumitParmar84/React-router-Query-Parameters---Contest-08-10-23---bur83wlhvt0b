@@ -15,7 +15,7 @@ export default function App() {
       <nav className="navbar navbar-light">
         <ul className="nav navbar-nav">
           <li>
-            <Link to="/"> Home <Link>
+            <Link to="/"> Home </Link>
           </li>
           <li>
             <Link to= "/shapes">Shapes</Link>
