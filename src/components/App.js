@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/App.css";
-import { BrowserRouter as Router,Link, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter as Router,Link, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Shapes from "./Shapes";
 import Image from "./Image";
